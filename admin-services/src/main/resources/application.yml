@@ -1,0 +1,34 @@
+# ====================== #
+# ========公共配置======== #
+# ====================== #
+
+spring:
+  application:
+    name: api-boot-admin-services
+  profiles:
+    active: dev
+  http:
+    converters:
+      preferred-json-mapper: fastJson
+server:
+  port: 9090
+
+# ApiBoot
+api:
+  boot:
+    # ApiBoot Security相关配置
+    security:
+      away: jdbc
+      enable-default-store-delegate: false
+      # 拦截服务内的全部接口请求地址
+      auth-prefix: /**
+    # ApiBoot OAuth相关配置
+    oauth:
+      jwt:
+        enable: true
+        sign-key: ApiBootAdmin@v1
+      away: jdbc
+    # ApiBoot MyBatis Pageable相关配置
+    pageable:
+      # 配置使用的数据库方言为：MySQL
+      dialect: mysql

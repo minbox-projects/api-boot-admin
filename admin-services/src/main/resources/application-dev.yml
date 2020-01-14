@@ -1,0 +1,39 @@
+# ====================== #
+# ======开发环境配置====== #
+# ====================== #
+
+# 数据库配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/api-boot-admin?characterEncoding=utf8&serverTimezone=Asia/Shanghai
+
+
+# ApiBoot
+api:
+  boot:
+    # ApiBoot Logging相关配置
+    logging:
+      format-console-log-json: true
+      show-console-log: true
+      # 配置日志排除的采集的接口地址列表，使用Ant方式配置
+      ignore-paths:
+        - /swagger-resources/**
+        - /swagger-ui.html
+        - /webjars/**
+      # 配置Log Server
+      admin:
+        server-address: logging-admin:admin#logserver@127.0.0.1:10000
+    swagger:
+      version: v1.0
+      title: ApiBoot Admin接口定义文档
+      description: 基于新一代接口服务框架 “ApiBoot” 的前后分离管理平台基础解决方案脚手架示例
+
+# 修改项目日志等级
+# 可打印SQL，仅开发环境配置
+logging:
+  level:
+    org.minbox.framework.api.boot.admin: debug
