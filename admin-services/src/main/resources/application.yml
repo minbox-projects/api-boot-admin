@@ -7,7 +7,7 @@ spring:
     name: api-boot-admin-services
   profiles:
     active: dev
-  http:
+  mvc:
     converters:
       preferred-json-mapper: fastJson
 server:

@@ -27,7 +27,7 @@ public class BaseService<T extends Object, ID extends Serializable> {
      * 如：EnhanceMapper<SystemUser,String> mapper，对应{@link org.minbox.framework.api.boot.admin.mapper.SystemUserMapper}
      */
     @Autowired
-    protected EnhanceMapper<T, ID> mapper;
+    protected EnhanceMapper<T> mapper;
     /**
      * MinBox Logging 提供的全局日志
      * 相关文档：http://www.minbox.io/logging/config-client.html#_15-%E5%85%A8%E5%B1%80%E6%97%A5%E5%BF%97

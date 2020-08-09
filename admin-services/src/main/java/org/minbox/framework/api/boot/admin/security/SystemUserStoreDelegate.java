@@ -3,7 +3,7 @@ package org.minbox.framework.api.boot.admin.security;
 import org.minbox.framework.api.boot.admin.entity.SystemUser;
 import org.minbox.framework.api.boot.admin.security.SystemUserDetail;
 import org.minbox.framework.api.boot.admin.mapper.SystemUserMapper;
-import org.minbox.framework.api.boot.plugin.security.delegate.ApiBootStoreDelegate;
+import org.minbox.framework.security.delegate.SecurityStoreDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -13,12 +13,12 @@ import org.springframework.util.ObjectUtils;
 
 /**
  * 系统用户业务逻辑
- * 实现ApiBoot提供的自定义查询Spring Security用户信息的接口{@link ApiBootStoreDelegate}
+ * 实现ApiBoot提供的自定义查询Spring Security用户信息的接口{@link SecurityStoreDelegate}
  *
  * @author 恒宇少年
  */
 @Component
-public class SystemUserStoreDelegate implements ApiBootStoreDelegate {
+public class SystemUserStoreDelegate implements SecurityStoreDelegate {
     /**
      * 系统用户数据接口
      */

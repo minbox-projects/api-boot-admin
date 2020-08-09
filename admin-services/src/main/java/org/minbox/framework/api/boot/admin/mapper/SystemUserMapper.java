@@ -15,7 +15,7 @@ import org.springframework.core.type.AnnotationMetadata;
  * @see org.minbox.framework.api.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceAutoConfiguration
  * @see org.minbox.framework.api.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceAutoConfiguration.AutoConfiguredMapperScannerRegistrar#registerBeanDefinitions(AnnotationMetadata, BeanDefinitionRegistry)
  */
-public interface SystemUserMapper extends EnhanceMapper<SystemUser, String> {
+public interface SystemUserMapper extends EnhanceMapper<SystemUser> {
     /**
      * 根据用户名查询用户基本信息
      * "findByXxx"是由MyBatis Enhance所提供的方法命名规则查询，Xxx是驼峰格式的数据实体字段名，如：{@link SystemUser#getUsername()}
