@@ -114,7 +114,7 @@
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <version>8.0.16</version>
+                        <version>5.1.47</version>
                     </dependency>
                 </dependencies>
                 <executions>
@@ -126,7 +126,7 @@
                 </executions>
                 <configuration>
                     <!--是否执行生成，如果需要生成需要设置为：true，使用完记得修改成：false-->
-                    <execute>false</execute>
+                    <execute>true</execute>
 
                     <dbName>api-boot-admin</dbName>
                     <dbUrl>jdbc:mysql://127.0.0.1:3306</dbUrl>
