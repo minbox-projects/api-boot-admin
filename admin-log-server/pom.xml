@@ -20,6 +20,26 @@
         <dependency>
             <groupId>org.minbox.framework</groupId>
             <artifactId>api-boot-starter-logging-admin</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.minbox.framework</groupId>
+                    <artifactId>minbox-logging-client</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.minbox.framework</groupId>
+                    <artifactId>minbox-logging-spring-context</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.minbox.framework</groupId>
+            <artifactId>minbox-logging-admin</artifactId>
+            <version>1.0.6-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.minbox.framework</groupId>
+            <artifactId>minbox-logging-spring-context</artifactId>
+            <version>1.0.6-SNAPSHOT</version>
         </dependency>
 
         <!--ApiBoot MyBatis Enhance-->
