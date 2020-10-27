@@ -126,7 +126,7 @@
                 </executions>
                 <configuration>
                     <!--是否执行生成，如果需要生成需要设置为：true，使用完记得修改成：false-->
-                    <execute>true</execute>
+                    <execute>false</execute>
 
                     <dbName>api-boot-admin</dbName>
                     <dbUrl>jdbc:mysql://127.0.0.1:3306</dbUrl>
