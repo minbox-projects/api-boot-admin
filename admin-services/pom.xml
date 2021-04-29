@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <properties>
-        <mapstruct.version>1.3.0.Final</mapstruct.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
         <javax.inject.version>1</javax.inject.version>
     </properties>
     <artifactId>admin-services</artifactId>
@@ -40,26 +40,6 @@
         <dependency>
             <groupId>org.minbox.framework</groupId>
             <artifactId>api-boot-starter-logging</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.minbox.framework</groupId>
-                    <artifactId>minbox-logging-client</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.minbox.framework</groupId>
-                    <artifactId>minbox-logging-spring-context</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.minbox.framework</groupId>
-            <artifactId>minbox-logging-client</artifactId>
-            <version>1.0.6-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.minbox.framework</groupId>
-            <artifactId>minbox-logging-spring-context</artifactId>
-            <version>1.0.6-SNAPSHOT</version>
         </dependency>
 
         <!--ApiBoot MyBatis Enhance-->
@@ -93,8 +73,9 @@
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct-jdk8</artifactId>
+            <artifactId>mapstruct</artifactId>
             <version>${mapstruct.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
@@ -128,7 +109,7 @@
             <plugin>
                 <groupId>org.minbox.framework</groupId>
                 <artifactId>api-boot-mybatis-enhance-maven-codegen</artifactId>
-                <version>2.2.2.RELEASE</version>
+                <version>${api.boot.version}</version>
                 <dependencies>
                     <!--数据驱动依赖-->
                     <dependency>
@@ -164,6 +145,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.4.5</version>
             </plugin>
         </plugins>
     </build>
