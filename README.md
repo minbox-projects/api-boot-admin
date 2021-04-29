@@ -91,6 +91,7 @@ git clone git@gitee.com:minbox-projects/api-boot-admin.git
 ### 6. 运行后台
 
 ```bash
+➜  api-boot-admin git:(master) ✗ cd admin-ui 
 # 安装npm依赖包
 ➜  admin-ui git:(master) ✗ npm install
 # 运行开发环境
